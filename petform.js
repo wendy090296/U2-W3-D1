@@ -77,5 +77,5 @@ if (!SameOwnerName) {
   alert("Il nome di questo padrone é già presente!");
 }
 
-petData.push(newPet);
+pets.push(newPet);
 petCard();
