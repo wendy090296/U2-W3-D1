@@ -14,53 +14,19 @@ class User {
     this.location = _location;
   }
 
-  compareTheAge(singer1, singer2) {
-    if (singer1.age > singer2.age) {
-      return (
-        singer1.firstName +
-        " " +
-        singer1.lastName +
-        " " +
-        "é piu vecchia di" +
-        " " +
-        singer2.firstName +
-        " " +
-        singer2.lastName
-      );
-    } else if (singer1.age < singer2.age) {
-      return (
-        singer1.firstName +
-        " " +
-        singer1.lastName +
-        " " +
-        "é piu giovane di" +
-        " " +
-        singer2.firstName +
-        " " +
-        singer2.lastName
-      );
+  compareTheAge(user2) {
+    if (this.age > user2.age) {
+      return `${this.firstName} is older than ${user2.firstName}`;
     } else {
-      return (
-        singer1.firstName +
-        " " +
-        singer1.lastName +
-        " " +
-        " e " +
-        singer2.firstName +
-        " " +
-        singer2.lastName +
-        " " +
-        "hanno la stessa età"
-      );
+      return `${this.firstName} is younger than ${user2.firstName}`;
     }
   }
 }
 
 const singer1 = new User("Fiorella", "Mannoia", 69, "Roma");
 const singer2 = new User("Mina", "Mazzini", 83, "Varese");
+console.log(singer1);
+console.log(singer2);
 
-// const singer3 = new User("Mia", "Martini", 77, "Reggio Calabria");
-
-// const singer4 = new User("Anna", "Oxa", 62, "Bari");
 const differenceOfTheAge = singer1.compareTheAge(singer2);
 console.log(differenceOfTheAge);
